@@ -1,0 +1,46 @@
+.dashboard {
+  &__widgets {
+    display: grid;
+    justify-items: center;
+    justify-content: space-around;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 20rem));
+    flex-wrap: wrap;
+    grid-gap: 3rem;
+  }
+  &__widget {
+    backface-visibility: hidden;
+    height: 10rem;
+    width: 20rem;
+    border-radius: 3px;
+    position: relative;
+
+    &--icon {
+      font-size: 6.5rem;
+      opacity: 0.25;
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &--content {
+      color: $color-grey-light-2;
+    }
+
+    &--1 {
+      @include dashboardWidget(crimson);
+    }
+
+    &--2 {
+      @include dashboardWidget(orange);
+    }
+
+    &--3 {
+      @include dashboardWidget(seagreen);
+    }
+
+    &--4 {
+      @include dashboardWidget(teal);
+    }
+  }
+}

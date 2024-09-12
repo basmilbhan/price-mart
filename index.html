@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Mart | Every Product On Affordable Rate</title>
+    <script src="js/navdropdown.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/410649a85e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("assests/header.html");
+        $("#sidebar").load("assests/sidebar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/fav.png" />
+  </head>
+  <body>
+    <main id="main">
+      <!-- sidebar start -->
+      <section id="sidebar" class="sidebar"></section>
+      <!-- sidebar end -->
+
+      <!--Remaining section-->
+      <!-- header -->
+      <section id="header" class="header"></section>
+
+      <!-- breadcrumb -->
+      <section id="breadcrumb" class="breadcrumb paragraph">
+        <span
+          ><a href="viewproducts.html"
+            ><i class="fa-solid fa-house-user"></i> Home</a
+          >
+          > </span
+        ><a href="index.html">Dashboard</a>
+      </section>
+
+      <!-- Body start -->
+      <section class="dashboard dashboardbody">
+        <div class="dashboard__widgets">
+          <div class="dashboard__widget dashboard__widget--1">
+            <div class="dashboard__widget--content">
+              <h1 class="heading-primary">$ 180K</h1>
+              <span class="heading-tertiary">Total Sales</span>
+            </div>
+            <div class="dashboard__widget--icon">
+              <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+          </div>
+          <div class="dashboard__widget dashboard__widget--2">
+            <div class="dashboard__widget--content">
+              <h1 class="heading-primary">65</h1>
+              <span class="heading-tertiary">Total Products</span>
+            </div>
+            <div class="dashboard__widget--icon">
+              <i class="fa-solid fa-box-archive"></i>
+            </div>
+          </div>
+          <div class="dashboard__widget dashboard__widget--3">
+            <div class="dashboard__widget--content">
+              <h1 class="heading-primary">9</h1>
+              <span class="heading-tertiary">Total Orders</span>
+            </div>
+            <div class="dashboard__widget--icon">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+          </div>
+          <div class="dashboard__widget dashboard__widget--4">
+            <div class="dashboard__widget--content">
+              <h1 class="heading-primary">3K</h1>
+              <span class="heading-tertiary">Today's Sales</span>
+            </div>
+            <div class="dashboard__widget--icon">
+              <i class="fa-solid fa-dollar-sign"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Body end -->
+    </main>
+  </body>
+</html>

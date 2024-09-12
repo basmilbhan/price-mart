@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Mart | Every Product On Affordable Rate</title>
+    <script src="js/navdropdown.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/410649a85e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("assests/header.html");
+        $("#sidebar").load("assests/sidebar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/fav.png" />
+  </head>
+  <body>
+    <main id="main" class="side-bar-hide">
+      <!-- sidebar start -->
+      <section id="sidebar" class="sidebar"></section>
+      <!-- sidebar end -->
+
+      <!--Remaining section-->
+      <!-- header -->
+      <section id="header" class="header"></section>
+
+      <!-- breadcrumb -->
+      <section id="breadcrumb" class="breadcrumb paragraph">
+        <span>
+          <a href="index.html"> <i class="fa-solid fa-house-user"></i> Home</a>
+          > <a href="viewusers.html">Users</a> >
+        </span>
+        <a href="addusers.html">Add Users</a>
+      </section>
+
+      <!-- Body start -->
+      <section class="addusers dashboardbody">
+        <form action="#" class="form u-margin-top-medium">
+          <div class="form__submit">
+            <h2 class="heading-secondary">User Registration</h2>
+            <div class="form__input">
+              <div class="name half">
+                <div class="fName half__input">
+                  <input type="text" name="fName" id="fName" required />
+                  <label for="fName">First Name</label>
+                </div>
+                <div class="lName half__input">
+                  <input required type="text" name="lName" id="lName" />
+                  <label for="lName">Last Name</label>
+                </div>
+              </div>
+              <div class="email">
+                <input type="email" name="email" id="email" required />
+                <label for="email ">Email</label>
+              </div>
+              <div class="password">
+                <input required type="password" name="password" id="password" />
+                <label for="password">Password</label>
+              </div>
+              <div class="contact">
+                <input required type="tel" name="contact" id="contact" />
+                <label for="contact">Contact No.</label>
+              </div>
+
+              <div class="user-role">
+                <select name="user-role" id="user-role" required>
+                  <option value="" selected disabled></option>
+                  <option value="dairy">Admin</option>
+                  <option value="vegetables">Customer</option>
+                  <option value="groceries">Editor</option>
+                  <option value="fruit">Subscriber</option>
+                </select>
+                <label for="user-role">User Role</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__submit">
+            <div class="form__input" style="position: relative">
+              <label for="file">Upload Profile Picture</label>
+              <input required type="file" name="file" id="file" class="file" />
+            </div>
+          </div>
+          <div class="form__btn u-margin-bottom-big">
+            <button>Add User</button>
+          </div>
+        </form>
+      </section>
+      <!-- Body end -->
+    </main>
+  </body>
+</html>

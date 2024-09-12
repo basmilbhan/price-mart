@@ -1,0 +1,264 @@
+.viewproducts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: space-between;
+  align-items: center;
+}
+
+%bg-padding {
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+.view-bar {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  @extend %bg-padding;
+  &__info {
+    align-self: center;
+    font-weight: 700;
+  }
+
+  &__method {
+    display: flex;
+    flex-wrap: nowrap;
+    column-gap: 2rem;
+    color: $color-grey-dark;
+
+    &--grid,
+    &--list {
+      transition: all 0.3s ease;
+      &:hover {
+        color: $color-grey-dark-3;
+      }
+    }
+    .active {
+      color: $color-grey-dark-3;
+    }
+  }
+}
+
+// products in grid viev
+
+.products {
+  transition: all 0.2s ease-in-out;
+  width: 95%;
+  align-self: center;
+  border: 1px solid $color-grey-light-2;
+  display: grid;
+  padding: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem;
+  @extend %bg-padding;
+
+  .product {
+    background-color: inherit;
+    display: grid;
+    padding: 3rem 2rem 2rem;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2.5rem;
+    z-index: 0;
+
+    @include respond(tab-port) {
+    }
+
+    &__img {
+      position: relative;
+      display: flex;
+      grid-row: 1/2;
+      align-items: start;
+      justify-content: center;
+      align-content: center;
+
+      img {
+        width: 70%;
+      }
+    }
+
+    &__name {
+      &:hover {
+        color: $color-secondary-light;
+        font-weight: 600;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1.5rem;
+      justify-content: center;
+      font-size: 1.8rem;
+      position: relative;
+      // padding-bottom: 65px;
+      color: $color-primary;
+      text-align: center;
+    }
+
+    &__price {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      del {
+        font-size: 14px;
+        color: $color-grey-dark;
+      }
+      ins {
+        font-weight: 600;
+        text-decoration: none;
+        color: $color-primary-dark;
+      }
+    }
+    &__order-now {
+      bottom: 0;
+      left: 0;
+      padding-top: 20px;
+      position: absolute;
+      right: 0;
+      visibility: hidden;
+      z-index: 9;
+      opacity: 0;
+      @include respond(tab-port) {
+        position: relative;
+        visibility: visible;
+        opacity: 1;
+      }
+
+      a {
+        background: none;
+        border: 2px solid $color-grey-light-2;
+        color: $color-grey-dark-2;
+        display: block;
+        font-weight: 600;
+        height: 45px;
+        letter-spacing: 0.1rem;
+        line-height: 41px;
+        padding: 0;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+
+        @include respond(tab-port) {
+          background: $color-primary;
+          border-color: $color-primary;
+          color: #fff;
+        }
+
+        &:hover {
+          background: $color-primary;
+          border-color: $color-primary;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .product:hover {
+    z-index: 1;
+    margin: -3rem -2rem -8.5rem -2rem; // to make sure the other products below doesnot move from its orginal positon
+    box-shadow: 0px 0px 13.5px 1.5px rgba(0, 0, 0, 0.1);
+    .product {
+      &__content {
+        padding-bottom: 6.5rem;
+      }
+      &__order-now {
+        visibility: visible;
+        z-index: 1;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// to show the products on list view manner
+
+.list.products {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+
+  row-gap: 2rem;
+  align-items: center;
+
+  .product {
+    position: relative;
+    padding: 2rem;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__img {
+      max-width: 40%;
+      align-self: center;
+      overflow: hidden;
+      img {
+        width: 120%;
+      }
+    }
+    &__content {
+      font-size: 2rem;
+      width: 60%;
+      padding: 1rem;
+      align-items: center;
+
+      justify-content: space-around;
+    }
+    &__order-now {
+      position: static;
+      visibility: visible;
+      z-index: 1;
+      opacity: 1;
+      a {
+        padding: 0rem 0.5rem;
+        height: auto;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  // shows single box and order now button while a product is hovered
+  .product:hover {
+    margin: 1% 0;
+    transform: scale(1.15);
+    position: relative;
+    top: 0;
+    box-shadow: 0px 0px 13.5px 1.5px rgba(0, 0, 0, 0.1);
+    .product {
+      &__content {
+        padding-bottom: 0rem;
+      }
+      &__order-now {
+        visibility: visible;
+        z-index: 1;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.pagination {
+  @extend %bg-padding;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  &__btn {
+    background-color: $color-secondary-light;
+    margin: 0 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    &:hover {
+      background-color: darken($color-secondary-light, 5%);
+    }
+    &:active {
+      border: 0px solid $color-secondary-light;
+      box-shadow: inset 0px 0px 5px 5px rgba(0, 0, 0, 0.08);
+    }
+  }
+}

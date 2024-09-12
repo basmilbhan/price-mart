@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Mart | Every Product On Affordable Rate</title>
+    <script src="js/navdropdown.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/410649a85e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("assests/header.html");
+        $("#sidebar").load("assests/sidebar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/fav.png" />
+  </head>
+  <body>
+    <main id="main" class="side-bar-hide">
+      <!-- sidebar start -->
+      <section id="sidebar" class="sidebar"></section>
+      <!-- sidebar end -->
+
+      <!--Remaining section-->
+      <!-- header -->
+      <section id="header" class="header"></section>
+
+      <!-- breadcrumb -->
+      <section id="breadcrumb" class="breadcrumb paragraph">
+        <span
+          ><a href="index.html"
+            ><i class="fa-solid fa-house-user"></i> Home</a
+          >
+          > </span
+        ><a href="viewproducts.html">Products</a>
+      </section>
+
+      <!-- Body start -->
+      <section class="viewproducts dashboardbody">
+
+
+        <!-- Top Tool or view control bar  -->
+        <div class="view-bar">
+          <div class="view-bar__info heading-tertiary">Showing 9 of 65</div>
+          <div class="view-bar__method heading-secondary">
+            <div id="grid" onclick="listMethod('grid')" class="view-bar__method--grid active">
+              <i class="fa-solid fa-table-cells"></i>
+            </div>
+            <div id="list"  onclick="listMethod('list')" class="view-bar__method--list"><i class="fa-solid fa-list"></i></div>
+          </div>
+        </div>
+
+        <!-- Product List method javascript   -->
+        
+        <script>
+          function listMethod(value) {
+            var grid = document.getElementById("grid");
+            var products = document.getElementById("products");
+              var list = document.getElementById("list");
+          if(value=="list"){
+            products.classList.add("list");
+            list.classList.add("active");
+            grid.classList.remove("active");
+          
+          }else{
+            products.classList.remove("list");
+            grid.classList.add("active");
+            list.classList.remove("active");
+          }
+          }
+          </script>
+
+
+<!-- products list down -->
+        <div id="products" class="products u-margin-top-big">
+          <div class="product">
+            <div class="product__img">
+              <img src="img/product.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 800.00 </del class="product__price--new">
+                <ins> NPR 500.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div><div class="product">
+            <div class="product__img">
+              <img src="img/product2.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 1800.00 </del class="product__price--new">
+                <ins> NPR 1200.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="img/product.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 800.00 </del class="product__price--new">
+                <ins> NPR 500.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div><div class="product">
+            <div class="product__img">
+              <img src="img/product2.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 1800.00 </del class="product__price--new">
+                <ins> NPR 1200.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="img/product.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 800.00 </del class="product__price--new">
+                <ins> NPR 500.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div><div class="product">
+            <div class="product__img">
+              <img src="img/product2.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 1800.00 </del class="product__price--new">
+                <ins> NPR 1200.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="img/product.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 800.00 </del class="product__price--new">
+                <ins> NPR 500.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="img/product2.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 1800.00 </del class="product__price--new">
+                <ins> NPR 1200.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="product__img">
+              <img src="img/product.jpg" alt="Product image" />
+            </div>
+            <div class="product__content">
+              <div class="product__name">Icecream Vanilla</div>
+              <div class="product__price">
+                <del class="product__price--cut"> NPR 800.00 </del class="product__price--new">
+                <ins> NPR 500.00 </ins>
+              </div>
+              <div class="product__order-now">
+                <a href="#">
+                  Order now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Pagination button section  -->
+        <div class="pagination u-margin-top-big u-margin-bottom-medium">
+          <span class="pagination__btn">
+            <a href="#">1</a>
+          </span>
+          <span class="pagination__btn">
+            <a href="#">2</a>
+          </span>
+          <span class="pagination__btn">
+            <a href="#">3</a>
+          </span>
+          <span class="pagination__btn">
+            <a href="#">4</a>
+          </span>
+          <span class="pagination__btn">
+            <a href="#">5</a>
+          </span>
+          <span class="pagination__btn">
+            <a href="#">Next</a>
+          </span>
+        </div>
+      </section>
+      <!-- Body end -->
+    </main>
+  </body>
+</html>

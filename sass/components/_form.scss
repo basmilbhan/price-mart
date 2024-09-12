@@ -1,0 +1,148 @@
+.form {
+  width: 80%;
+  background-color: #fff;
+  margin: 2rem auto;
+  padding: 2rem;
+
+  @include respond(tab-port) {
+    width: 90%;
+  }
+  @include respond(phone) {
+    padding: 0;
+    width: 100%;
+  }
+
+  &__submit {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    background-color: lighten($color-grey-light, 1%);
+    padding: 2rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+
+    label {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-grey-dark-3;
+      text-transform: capitalize;
+      pointer-events: none;
+      transition: 0.3s ease all;
+    }
+    .half {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      @include respond(tab-port) {
+        flex-wrap: wrap;
+      }
+      &__input {
+        width: 48%;
+
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+    }
+    div {
+      display: grid;
+      position: relative;
+
+      label {
+        background: transparent;
+        margin-bottom: 1rem;
+        left: 1.2rem;
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute;
+      }
+      select {
+        width: 50%;
+        @include respond(phone) {
+          width: 100%;
+        }
+      }
+
+      input,
+      select,
+      textarea {
+        background: $color-grey-light;
+        border: 1px solid #c2c2c2;
+        border-radius: 3px;
+        color: $color-secondary-dark;
+        height: 5rem;
+        font-size: 1.6rem;
+        box-shadow: none;
+        padding: 0.5rem 0.75rem;
+
+        &:focus {
+          outline: 1px solid $color-primary-light;
+        }
+
+        &:focus ~ label,
+        &:not(:focus):valid ~ label {
+          top: 0;
+          position: absolute;
+          font-weight: 400;
+          // top: 8px;
+          // bottom: 1rem;
+          left: 1rem;
+          font-size: 1.8rem;
+          opacity: 1;
+          background: $color-grey-light;
+        }
+      }
+
+      textarea {
+        width: 100%;
+        padding: 1rem 0.75rem;
+        min-height: 15rem;
+        box-sizing: border-box;
+        border-radius: 4px;
+        resize: none;
+
+        &:focus ~ label[for="textbox"] {
+          top: 0;
+          transform: translate(0, -60%);
+        }
+      }
+      label[for="textbox"] {
+        top: 5%;
+        transform: initial;
+      }
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3rem;
+    margin: 3rem;
+
+    button {
+      border: 1px solid $color-grey-dark;
+      background-color: transparent;
+      padding: 1rem 3rem;
+      border-radius: 3px;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: $color-primary;
+      transition: all.2s ease;
+      backface-visibility: hidden;
+
+      @include respond(tab-port) {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+      }
+    }
+  }
+}

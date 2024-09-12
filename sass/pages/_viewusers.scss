@@ -1,0 +1,18 @@
+.viewusers {
+  @extend .order;
+
+  img {
+    border-radius: 50%;
+    justify-self: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    @include respond(tab-port) {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+    @include respond(phone) {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

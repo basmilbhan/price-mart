@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Mart | Every Product On Affordable Rate</title>
+    <script src="js/navdropdown.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/410649a85e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      $(function () {
+        $("#header").load("assests/header.html");
+        $("#sidebar").load("assests/sidebar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/fav.png" />
+  </head>
+
+  <body>
+    <main id="main" class="side-bar-hide">
+      <!-- sidebar start -->
+      <section id="sidebar" class="sidebar"></section>
+      <!-- sidebar end -->
+
+      <!--Remaining section-->
+      <!-- header -->
+      <section id="header" class="header"></section>
+
+      <!-- breadcrumb -->
+      <section id="breadcrumb" class="breadcrumb paragraph">
+        <span
+          ><a href="index.html"><i class="fa-solid fa-house-user"></i> Home</a>
+          > </span
+        ><a href="viewusers.html">Users</a>
+      </section>
+
+      <!-- Body start -->
+      <section class="viewusers dashboardbody">
+        <table class="table">
+          <thead class="table__head heading-tertiary">
+            <tr>
+              <th>S.N.</th>
+              <th>Image</th>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Contact</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody class="paragraph">
+            <tr>
+              <td>1</td>
+              <td>
+                <img src="img/editor.png" width="40px" alt="user image" />
+              </td>
+              <td>Basmil</td>
+              <td>basmilbhan@gmail.com</td>
+              <td>9861771632</td>
+              <td>Editor</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td><img src="img/admin.png" width="40px" alt="user image" /></td>
+              <td>Admin</td>
+              <td>basmil@gmail.com</td>
+              <td>9851161393</td>
+              <td>Admin</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>
+                <img src="img/customer.png" width="40px" alt="user image" />
+              </td>
+              <td>Ramesh</td>
+              <td>ramesh@gmail.com</td>
+              <td>9851211393</td>
+              <td>Customer</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>
+                <img src="img/subscriber.png" width="40px" alt="user image" />
+              </td>
+              <td>Milan</td>
+              <td>Milan@gmail.com</td>
+              <td>9861771632</td>
+              <td>Editor</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>
+                <img src="img/customer.png" width="40px" alt="user image" />
+              </td>
+              <td>Dhruva</td>
+              <td>dhruva@gmail.com</td>
+              <td>9851161393</td>
+              <td>Subscriber</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>
+                <img src="img/editor.png" width="40px" alt="user image" />
+              </td>
+              <td>Basmil</td>
+              <td>basmilbhan@gmail.com</td>
+              <td>9861771632</td>
+              <td>Editor</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- Body end -->
+    </main>
+  </body>
+</html>

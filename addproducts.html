@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Mart | Every Product On Affordable Rate</title>
+    <script src="js/navdropdown.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/410649a85e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("assests/header.html");
+        $("#sidebar").load("assests/sidebar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/fav.png" />
+  </head>
+  <body>
+    <main id="main">
+      <!-- sidebar start -->
+      <section id="sidebar" class="sidebar"></section>
+      <!-- sidebar end -->
+
+      <!--Remaining section-->
+      <!-- header -->
+      <section id="header" class="header"></section>
+
+      <!-- breadcrumb -->
+      <section id="breadcrumb" class="breadcrumb paragraph">
+        <span>
+          <a href="index.html">
+            <i class="fa-solid fa-house-user"></i>
+            Home
+          </a>
+          > <a href="viewproducts.html">Products</a> > </span
+        ><a href="addproducts.html">Add product</a>
+      </section>
+
+      <!-- Body start -->
+      <section class="addproducts dashboardbody">
+        <form action="#" class="form u-margin-top-medium">
+          <div class="form__submit">
+            <h2 class="heading-secondary">Basic Information</h2>
+            <div class="form__input">
+              <div class="title">
+                <input required type="text" name="title" id="title" />
+                <label for="title">Property Title</label>
+              </div>
+              <div class="price half">
+                <div class="rPrice half__input">
+                  <input type="text" name="rPrice" id="rPrice" required />
+                  <label for="rPrice">Regular Price</label>
+                </div>
+                <div class="sPrice half__input">
+                  <input required type="text" name="sPrice" id="sPrice" />
+                  <label for="sPrice">Selling Price</label>
+                </div>
+              </div>
+              <div class="property-type">
+                <select name="property-type" id="property-type" required>
+                  <option value="" selected disabled></option>
+                  <option value="dairy">dairy</option>
+                  <option value="vegetables">vegetables</option>
+                  <option value="groceries">groceries</option>
+                  <option value="fruit">fruit</option>
+                </select>
+                <label for="property-type">Select Property Type</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__submit">
+            <h2 class="heading-secondary">Gallery</h2>
+            <div class="form__input" style="position: relative">
+              <label for="file">Upload Image</label>
+              <input required type="file" name="file" id="file" class="file" />
+            </div>
+          </div>
+          <div class="form__submit">
+            <h2 class="heading-secondary">Detailed Information</h2>
+            <div class="form__input" style="position: relative">
+              <div>
+                <textarea
+                  type="text"
+                  id="textbox"
+                  class="textbox"
+                  required
+                ></textarea>
+                <label for="textbox">Description</label>
+              </div>
+            </div>
+          </div>
+          <div class="form__btn">
+            <button>Add Product</button>
+          </div>
+        </form>
+      </section>
+      <!-- Body end -->
+    </main>
+  </body>
+</html>

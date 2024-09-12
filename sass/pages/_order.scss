@@ -1,0 +1,9 @@
+.order {
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  height: calc(100vh - 15rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  justify-content: center;
+}

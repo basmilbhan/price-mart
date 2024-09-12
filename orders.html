@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Price Mart | Every Product On Affordable Rate</title>
+    <script src="js/navdropdown.js"></script>
+
+    <script
+      src="https://kit.fontawesome.com/410649a85e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("#header").load("assests/header.html");
+        $("#sidebar").load("assests/sidebar.html");
+      });
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" href="img/fav.png" />
+  </head>
+  <body>
+   <main id="main" class="side-bar-hide">
+      <!-- sidebar start -->
+      <section id="sidebar" class="sidebar"></section>
+      <!-- sidebar end -->
+
+      <!--Remaining section-->
+      <!-- header -->
+      <section id="header" class="header"></section>
+
+      <!-- breadcrumb -->
+      <section id="breadcrumb" class="breadcrumb paragraph">
+        <span
+          ><a href="index.html"><i class="fa-solid fa-house-user"></i> Home</a>
+          > </span
+        ><a href="index.html">Orders</a>
+      </section>
+
+      <!-- Body start -->
+      <section class="order dashboardbody">
+        <table class="table">
+          <thead class="table__head heading-tertiary">
+            <tr>
+              <th>S.N.</th>
+              <th>Name</th>
+              <th>Product</th>
+              <th>Status</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody class="paragraph">
+            <tr>
+              <td>1</td>
+              <td>Milan</td>
+              <td>IceCream-vanila</td>
+              <td><span class="status status--cancel">Cancel</span></td>
+              <td>$80</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Ramesh</td>
+              <td>IceCream-Strawberry</td>
+              <td>
+                <span class="status status--processing">Processing</span>
+              </td>
+              <td>$75</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Basmil</td>
+              <td>IceCream-Banana</td>
+              <td>
+                <span class="status status--completed">completes</span>
+              </td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Dhruva</td>
+              <td>IceCream-Chocolate</td>
+              <td>
+                <span class="status status--onhold">On Hold</span>
+              </td>
+              <td>$100</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Milan</td>
+              <td>IceCream-vanila</td>
+              <td><span class="status status--cancel">Cancel</span></td>
+              <td>$80</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Ramesh</td>
+              <td>IceCream-Strawberry</td>
+              <td>
+                <span class="status status--processing">Processing</span>
+              </td>
+              <td>$75</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>Basmil</td>
+              <td>IceCream-Banana</td>
+              <td>
+                <span class="status status--completed">completes</span>
+              </td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td>Dhruva</td>
+              <td>IceCream-Chocolate</td>
+              <td>
+                <span class="status status--onhold">On Hold</span>
+              </td>
+              <td>$100</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td>Milan</td>
+              <td>IceCream-vanila</td>
+              <td><span class="status status--cancel">Cancel</span></td>
+              <td>$80</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>Ramesh</td>
+              <td>IceCream-Strawberry</td>
+              <td>
+                <span class="status status--processing">Processing</span>
+              </td>
+              <td>$75</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>Basmil</td>
+              <td>IceCream-Banana</td>
+              <td>
+                <span class="status status--completed">completes</span>
+              </td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>Dhruva</td>
+              <td>IceCream-Chocolate</td>
+              <td>
+                <span class="status status--onhold">On Hold</span>
+              </td>
+              <td>$100</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>Milan</td>
+              <td>IceCream-vanila</td>
+              <td><span class="status status--cancel">Cancel</span></td>
+              <td>$80</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>Ramesh</td>
+              <td>IceCream-Strawberry</td>
+              <td>
+                <span class="status status--processing">Processing</span>
+              </td>
+              <td>$75</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>Basmil</td>
+              <td>IceCream-Banana</td>
+              <td>
+                <span class="status status--completed">completes</span>
+              </td>
+              <td>$70</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td>Dhruva</td>
+              <td>IceCream-Chocolate</td>
+              <td>
+                <span class="status status--onhold">On Hold</span>
+              </td>
+              <td>$100</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <!-- Body end -->
+    </main>
+  </body>
+</html>

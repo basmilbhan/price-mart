@@ -1,0 +1,91 @@
+// clear fix for float class it fixes the lose of height of div
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// diffrent break point for diffrent devices
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //devices width 600px
+  }
+
+  @if $breakpoint == tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //devices width 900px
+  }
+
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 78.12em) {
+      @content;
+    } //devices width 1200px
+  }
+
+  @if $breakpoint == big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //devices width 1800px
+  }
+}
+
+// Order table Status
+
+@mixin orderStatus($status, $color) {
+  .status {
+    display: block;
+    min-width: max-content;
+    max-width: 80%;
+    text-align: center;
+    border-radius: 50px;
+    color: $color-grey-dark;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 0.2rem 2rem;
+
+    @if $status == processing {
+      &--processing {
+        background-color: lighten($color, 20%);
+      }
+    }
+    @if $status == completed {
+      &--completed {
+        background-color: lighten($color, 20%);
+      }
+    }
+    @if $status == cancel {
+      &--cancel {
+        background-color: lighten($color, 20%);
+      }
+    }
+    @if $status == onhold {
+      &--onhold {
+        background-color: lighten($color, 20%);
+      }
+    }
+  }
+}
+
+// to make the height of logo and top bar same
+
+@mixin headerAndLogo($display) {
+  height: $header-height;
+  display: $display;
+  padding: 1rem 2.5rem;
+}
+
+// to make same height and style of dash board widget
+@mixin dashboardWidget($color) {
+  padding: 1rem;
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(255, 255, 255, 0.1)
+  );
+  background-color: lighten($color, 5%);
+}
